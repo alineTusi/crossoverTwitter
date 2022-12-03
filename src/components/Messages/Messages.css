@@ -1,0 +1,4 @@
+.searchTextField .MuiInputBase-root{
+  border: 1px solid !important;
+  border-radius: 50px !important;
+}
