@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Profile from './component/profile/Profile';
 
 function App() {
   return (
+    
     <div className="App">
-     <p>Hello World</p>
+     <Profile/>
     </div>
   );
 }
