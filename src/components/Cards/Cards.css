@@ -1,0 +1,73 @@
+*{
+    font-family: Roboto;
+}
+
+
+.container-card {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    perspective: 90rem;
+    perspective-origin: 30% 60%;
+    background-color: white;
+    width: 90%;
+    margin:auto;
+    justify-content: space-between;
+}
+
+.transform {
+    display: flex;
+    transform: rotate(10deg) rotateY(15deg) rotate2(-9deg) scale3d(1,1,-0.9) scale(1.1) translateX(50px);
+
+}
+
+.card {
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0px 18px;
+    width: 350px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8s;
+
+}
+
+.card h2 {
+    text-transform: capitalize;
+}
+
+.card h4 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 40px;
+
+}
+
+
+.card-1 {
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+
+}
+
+.card-1:hover {
+    transform: scale(1.11);
+    box-shadow: -7px 4px 20px #b527cf;
+
+}
+
+.card-1::before {
+    background: linear-gradient(90deg, #b527cf 0%, #3546f0 100% );
+}
