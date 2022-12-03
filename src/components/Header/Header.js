@@ -11,14 +11,9 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-          <Link style={{
-            color: "white",
-            textDecoration: "none",
-            }} to="/">Home</Link>
-          <Link style={{
-            color: "white",
-            textDecoration: "none",
-            }} to="/messages">Messages</Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="messages">Messages</Nav.Link>
+            <Nav.Link href="#pricing">Profile</Nav.Link>
           </Nav>
           <Nav>
           </Nav>

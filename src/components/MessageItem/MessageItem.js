@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   MessageItemContainer,
   MessageItemImageContainer,
@@ -12,10 +12,10 @@ import {
 } from "./MessageItem.style";
 import dateformat from "dateformat"
 
-const MessageItem = ({ name, username, date, message }) => {
+const MessageItem = ({ name, username, date, message, selected }) => {
   return (
     <>
-      <MessageItemContainer>
+      <MessageItemContainer selected={selected}>
         <MessageItemImageContainer>
           <MessageItemImage
             src={
