@@ -12,7 +12,11 @@ import {
 } from "./Profile.style"
 
 
- const Profile = () => {
+
+ const Profile = ({city, firstname, lastname}) => {
+   
+
+
     return(
         <DivContainer>
             <div>
