@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './Cards.css'
-import Photo from "../../../src/gradient.png"
+import Photo from "../../../src/profile.jpg"
 import ProfilePicture from "../../../src/Image.jpg"
 import axios from "axios";
 import { Link } from "react-router-dom";

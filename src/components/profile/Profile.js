@@ -1,6 +1,6 @@
 import React from "react";
 import background from '../../../src/Image.jpg'
-import profile from '../../../src/Profile.jpg'
+import profile from '../../../src/profile.jpg'
 import {
     DivContainer,
     HeadTitle,
@@ -13,7 +13,7 @@ import {
 
 
 
- const Profile = ({city, firstname, lastname}) => {
+ const Profile = () => {
    
 
 
