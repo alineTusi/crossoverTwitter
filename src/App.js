@@ -1,6 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home";
-import Messages from "./components/Header/Messages/Messages";
+import Messages from "./components/Messages/Messages";
+import Profile from "./components/profile/Profile";
 
 function App() {
   return (
