@@ -1,13 +1,15 @@
 import styled from "@emotion/styled";
 
 export const MessageItemContainer = styled.div`
-  
   width:450px;
   height: 90px;
   display: flex;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+    ${({ selected }) => selected && `
+    background: blue;
+  `}
 `;
 
 export const MessageItemImageContainer = styled.div`

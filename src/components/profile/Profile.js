@@ -1,6 +1,6 @@
 import React from "react";
-import background from '../../../src/Image.jpg'
-import profile from '../../../src/Profile.jpg'
+import background from '../../Image.jpg'
+import profile from '../../profile.jpg'
 import {
     DivContainer,
     HeadTitle,
