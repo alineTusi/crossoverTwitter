@@ -7,6 +7,7 @@ function App() {
     <div style={{width:"100%", height:"100%"}}>
       <Home />
       <Messages />
+     <Profile/>
     </div>
   );
 }
