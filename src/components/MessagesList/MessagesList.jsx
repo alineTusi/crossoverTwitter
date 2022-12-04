@@ -66,6 +66,15 @@ const MessagesList = () => {
     setSearchText(e.target.value);
   };
 
+  const onItemClick = (item) => {
+    const um = userMessages.map((x) => {
+      x.selected = x._id === item._id;
+      return x;
+    });
+
+    setUserMessages(um);
+  };
+
   useEffect(() => {
     axios
       .get("https://twittercrossover.herokuapp.com/users/list")
@@ -91,30 +100,33 @@ const MessagesList = () => {
   useEffect(() => {
     const uMessages = [...users];
     uMessages.map((user) => {
-      user.messages = messages.filter(m => m.userId === user._id);
+      user.messages = messages.filter((m) => m.userId === user._id);
     });
 
-    console.log('uMessages', uMessages)
+    console.log("uMessages", uMessages);
 
-    const usersWithMessagesOnly = uMessages.filter(um => um.messages.length);
+    const usersWithMessagesOnly = uMessages.filter((um) => um.messages.length);
 
     setUserMessages(usersWithMessagesOnly);
     console.log("usersWithMessagesOnly", usersWithMessagesOnly);
   }, [messages]);
 
   return (
-    <MessagesListContainer>
+    <MessagesListContainer id="MessagesListContainer">
       <MessageHeader />
       <MessageSearch value={searchText} onChange={setSearch} />
 
       {userMessages.map((user) => (
-        <MessageItem
-          name={user.firstName}
-          username={user.username}
-          date={user.messages.at(-1).createdAt}
-          message={user.messages.at(-1).text}
-          selected={user.selected}
-        />
+        <div key={user._id} onClick={() => onItemClick(user)}>
+          <MessageItem
+            id={user._id}
+            name={user.firstName}
+            username={user.username}
+            date={user.messages.at(-1).createdAt}
+            message={user.messages.at(-1).text}
+            selected={user.selected}
+          />
+        </div>
       ))}
     </MessagesListContainer>
   );

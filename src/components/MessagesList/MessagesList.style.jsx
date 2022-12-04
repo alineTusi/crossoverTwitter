@@ -1,18 +1,16 @@
 import styled from "@emotion/styled";
 
 export const MessagesListContainer = styled.div`
+  width: 650px;
+  height: 100vh;
   border-right: 0.5px solid;
   border-left: 0.5px solid;
   border-color: lightgray;
-  width: 450px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 1024px) {
     width: 100%;
   }
-  padding-left: 25px;
-  padding-right: 25px;
 `;
 
 export const MessagesListHeaderDiv = styled.div`
@@ -20,6 +18,8 @@ export const MessagesListHeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 export const MessagesListHeaderTitle = styled.span`
@@ -41,6 +41,8 @@ export const MessagesListSearchDiv = styled.div`
   align-items: center;
   padding-top: 45px;
   padding-bottom: 45px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 export const MessagesListIcon = styled.img`
