@@ -25,14 +25,13 @@ export const MessagesListHeaderDiv = styled.div`
 export const MessagesListHeaderTitle = styled.span`
   font-weight: 800;
   font-size: 25px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-`
+`;
 
 export const MessagesListHeaderIcons = styled.div`
   justify-content: space-between;
   display: flex;
   width: 65px;
-`
+`;
 
 export const MessagesListSearchDiv = styled.div`
   height: 50px;

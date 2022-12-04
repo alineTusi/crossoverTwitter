@@ -7,12 +7,14 @@ export const MessageItemContainer = styled.div`
   padding-left: 20px;
   padding-right: 20px;
 
-  ${({ selected }) => selected && `
+  ${({ selected }) =>
+    selected &&
+    `
     background: #EFF3F4;
     border-right: 2px solid #198CD8;
   `}
   &:hover {
-    background-color: #F7F9F9;
+    background-color: #f7f9f9;
   }
 `;
 
@@ -43,26 +45,18 @@ export const MessageItemContent = styled.div`
 
 export const MessageItemUserInfoName = styled.span`
   font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
 export const MessageItemUserInfoUserName = styled.span`
   margin-left: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
 export const MessageItemUserInfoDate = styled.span`
   margin-left: 10px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
 export const MessageItemMessage = styled.span`
   width: 100%;
   white-space: nowrap;
   word-wrap: break-word;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;

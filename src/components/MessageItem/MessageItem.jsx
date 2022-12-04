@@ -9,7 +9,7 @@ import {
   MessageItemContent,
   MessageItemUserInfoDate,
   MessageItemMessage,
-} from "./MessageItem.css.styled";
+} from "./MessageItem.styled";
 import dateformat from "dateformat";
 
 const MessageItem = ({ name, username, date, message, selected }) => {
