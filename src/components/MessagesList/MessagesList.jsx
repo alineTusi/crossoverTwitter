@@ -69,8 +69,8 @@ const MessagesList = () => {
   useEffect(() => {
     axios
       .get("https://twittercrossover.herokuapp.com/users/list")
-      .then((data) => {
-        const filteredUsers = data.data.users.filter((u) =>
+      .then((result) => {
+        const filteredUsers = result.data.users.filter((u) =>
           u.firstName.toLowerCase().includes(searchText.toLowerCase())
         );
         setUsers(filteredUsers);
@@ -82,22 +82,24 @@ const MessagesList = () => {
   useEffect(() => {
     axios
       .get("https://twittercrossover.herokuapp.com/messages/list")
-      .then((data) => {
-        console.log(setMessages(data.data.messages));
+      .then((result) => {
+        console.log(result.data.messages);
+        setMessages(result.data.messages);
       });
   }, [users]);
 
   useEffect(() => {
     const uMessages = [...users];
     uMessages.map((user) => {
-      user.messages = messages.filter((m) => m.userId === user._id);
+      user.messages = messages.filter(m => m.userId === user._id);
     });
 
-    setUserMessages(uMessages.filter((um) => um.messages.length));
-    console.log(
-      "uMessages",
-      uMessages.filter((um) => um.messages.length)
-    );
+    console.log('uMessages', uMessages)
+
+    const usersWithMessagesOnly = uMessages.filter(um => um.messages.length);
+
+    setUserMessages(usersWithMessagesOnly);
+    console.log("usersWithMessagesOnly", usersWithMessagesOnly);
   }, [messages]);
 
   return (
@@ -109,7 +111,7 @@ const MessagesList = () => {
         <MessageItem
           name={user.firstName}
           username={user.username}
-          date={user.createdAt}
+          date={user.messages.at(-1).createdAt}
           message={user.messages.at(-1).text}
           selected={user.selected}
         />

@@ -8,8 +8,8 @@ import {
   MessageItemUserInfoUserName,
   MessageItemContent,
   MessageItemUserInfoDate,
-  MessageItemUserInfoUserMessage,
-} from "./MessageItem.style";
+  MessageItemMessage,
+} from "./MessageItem.css.styled";
 import dateformat from "dateformat"
 
 const MessageItem = ({ name, username, date, message, selected }) => {
@@ -33,7 +33,7 @@ const MessageItem = ({ name, username, date, message, selected }) => {
             </div>
             <MessageItemUserInfoDate>{dateformat(new Date(date), "mmm dd, yyyy")}</MessageItemUserInfoDate>
           </MessageItemUserInfo>
-          <MessageItemUserInfoUserMessage>{message}</MessageItemUserInfoUserMessage>
+          <MessageItemMessage>{message}</MessageItemMessage>
         </MessageItemContent>
       </MessageItemContainer>
     </>

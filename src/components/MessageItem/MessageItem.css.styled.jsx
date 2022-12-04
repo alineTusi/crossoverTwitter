@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 
 export const MessageItemContainer = styled.div`
-  width:450px;
+  width: 450px;
   height: 90px;
   display: flex;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-    ${({ selected }) => selected && `
+  ${({ selected }) =>
+    selected &&
+    `
     background: blue;
   `}
 `;
@@ -30,17 +30,15 @@ export const MessageItemUserInfo = styled.div`
 `;
 
 export const MessageItemContent = styled.div`
-
-  width:330px;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  margin-right: 40px;
-  flex-direction: column;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 50px;
 `;
 
 export const MessageItemUserInfoName = styled.span`
-  margin-left: 10px;
   font-weight: bold;
 `;
 
@@ -49,10 +47,10 @@ export const MessageItemUserInfoUserName = styled.span`
 `;
 
 export const MessageItemUserInfoDate = styled.span`
-  margin-left: 10px
+  margin-left: 10px;
 `;
 
-export const MessageItemUserInfoUserMessage = styled.span`
-  margin-left: 10px;
+export const MessageItemMessage = styled.span`
+  white-space: nowrap;
   word-wrap: break-word;
 `;
