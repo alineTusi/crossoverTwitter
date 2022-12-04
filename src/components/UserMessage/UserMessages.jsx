@@ -1,5 +1,5 @@
 import React from "react";
-import { NewMessageButton, SelectMessageContainer, SelectMessageTitle, UserMessageContainer } from "./UserMessages.style";
+import { NewMessageButton, SelectMessageContainer, SelectMessageText, SelectMessageTitle, UserMessageContainer } from "./UserMessages.style";
 
 const UserMessage = () => {
   return (
@@ -7,10 +7,10 @@ const UserMessage = () => {
       <UserMessageContainer>
         <SelectMessageContainer>
           <SelectMessageTitle>Select a message</SelectMessageTitle>
-          <p>
+          <SelectMessageText>
             Choose from your existing conversations, start a new one, or just
             keep swimming.
-          </p>
+          </SelectMessageText>
           <NewMessageButton>New message</NewMessageButton>
         </SelectMessageContainer>
       </UserMessageContainer>

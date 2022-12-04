@@ -12,10 +12,14 @@ export const SelectMessageContainer = styled.div`
   width: 335px;
 `
 export const SelectMessageTitle = styled.h2`
-  font-weight: bold;
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+`
+export const SelectMessageText = styled.p`
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
 export const NewMessageButton = styled.button`
-  font-weight: bold;
+  font-weight: 900;
   font-size: large;
   border: 0px;
   color: white;
@@ -23,4 +27,5 @@ export const NewMessageButton = styled.button`
   width: 180px;
   height: 55px;
   background-color: #198CD8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
